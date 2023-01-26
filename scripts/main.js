@@ -60,7 +60,7 @@ var frequency = 1e3;
 
 
 var sequence = [
-    "1110111", //0
+   /* "1110111", //0
     "0010010", //1
     "1011101", //2
     "1011011", //3
@@ -69,7 +69,7 @@ var sequence = [
     "1101111", //6
     "1010010", //7
     "1111111", //8
-    "1111010"  //9
+    "1111010"  //9 */
 ]; 
 
 //"*" - Used to select any and all types of elements in an HTML page; In this case it's getting all SVG elements
@@ -82,18 +82,18 @@ var counter = 0;
 //On load, call stepSequence()
 window.onload = function() {
     
-    // //Putting binary sequences from 0-27 in sequence array
-    // for(var num = 0; num <= 63; num++){
-    //     let binaryStr = num.toString(2); //the number in base 2 binary
+    //Putting binary sequences from 0-27 in sequence array
+     for(var num = 0; num <= 63; num++){
+         let binaryStr = num.toString(2); //the number in base 2 binary
 
-    //     //Add 0s to beginning if less than 7 places
-    //     while(binaryStr.length < 7){
-    //         binaryStr = "0" + binaryStr;
-    //     }
+         //Add 0s to beginning if less than 7 places
+         while(binaryStr.length < 7){
+             binaryStr = "0" + binaryStr;
+         }
 
-    //     console.log(num + " = " + binaryStr);
-    //     sequence.push(binaryStr);
-    // }
+         console.log(num + " = " + binaryStr);
+         sequence.push(binaryStr);
+     }
 
     //Debugging
     for(var a in elements){
